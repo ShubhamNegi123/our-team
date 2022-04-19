@@ -22,6 +22,9 @@ body {
         list-style: none;
         margin-bottom: 0px;
     }
+    h2{
+        text-transform: capitalize;
+    }
     * {
         box-sizing: border-box;
     }
@@ -50,22 +53,42 @@ body {
                     padding-bottom: 10px;
                     color: #fff;
                     text-transform: uppercase;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        transition: all 0.3s ease;
+                        color: $heading-color;
+                    }
+                }
+                .active-nav {
+                    position: relative;
+                    display: block;
+                    color: $heading-color;
+                    &::after {
+                        position: absolute;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translate(-50%);
+                        width: 50px;
+                        height: 2px;
+                        content: "";
+                        background-color: $heading-color;
+                    }
                 }
             }
             .header-services-link {
                 .services-dropdown {
                     opacity: 0;
                     visibility: hidden;
-                    transition: all .3s ease;
+                    transition: all 0.3s ease;
                     background-color: rgba(255, 255, 255, 0.5);
                     position: absolute;
                     width: 150px;
                     top: 90px;
                     left: 0px;
-                    li {                        
+                    li {
                         border-bottom: 1px solid #000;
                         border-left: 5px solid transparent;
-                        transition: all .3s ease;
+                        transition: all 0.3s ease;
                         padding: 0px;
                         a {
                             display: block;
@@ -73,20 +96,40 @@ body {
                             padding: 5px;
                             color: #000;
                         }
-                        &:hover{
+                        &:hover {
                             padding-left: 10px;
-                            transition: all .3s ease;
+                            transition: all 0.3s ease;
                             border-left: 5px solid #000;
-
                         }
                     }
                 }
-                &:hover{
+                &:hover {
                     .services-dropdown {
-                        transition: all .3s ease;
+                        transition: all 0.3s ease;
                         top: 26px;
                         opacity: 1;
                         visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-media-icons {
+        position: fixed;
+        top: 50%;
+        transform: translate(-50%);
+        left: 30px;
+        ul {
+            display: flex;
+            transform: rotate(270deg);
+            li {
+                padding: 0px 10px;
+                font-size: 14px;
+                a {
+                    color: #fff;
+                    i {
+                        padding-right: 5px;
                     }
                 }
             }
@@ -107,7 +150,7 @@ header {
                     color: #fff;
                     font-size: 60px;
                     font-weight: bolder;
-                    .typing{
+                    .typing {
                         color: $heading-color;
                     }
                 }
@@ -134,6 +177,7 @@ header {
         }
     }
     .about-content {
+        position: relative;
         h2 {
             word-spacing: 15px;
             letter-spacing: 5px;
@@ -150,6 +194,12 @@ header {
         }
         a {
             text-transform: uppercase;
+        }
+        .heart-img {
+            position: absolute;
+            right: 0px;
+            top: 50px;
+            width: 60px;
         }
     }
 }
@@ -183,13 +233,34 @@ header {
             font-size: 18px;
         }
         ul {
-            min-height: 120px;
+            min-height: 150px;
             padding-left: 0px;
             li {
+                margin-bottom: 5px;
+                padding-left: 0px;
+                position: relative;
+                transition: all 0.3s ease;
+                &::after {
+                    transition: all 0.3s ease;
+                    position: absolute;
+                    top: 12px;
+                    left: 0px;
+                    width: 0px;
+                    height: 2px;
+                    background-color: $heading-color;
+                    content: "";
+                }
                 a {
                     color: #7a7772;
                     font-size: 14px;
-                    padding-bottom: 10px;
+                    padding: 5px 0px;
+                }
+                &:hover {
+                    transition: all 0.3s ease;
+                    padding-left: 12px;
+                    &::after {
+                        width: 6px;
+                    }
                 }
             }
         }
@@ -202,51 +273,47 @@ header {
         font-size: 50px;
         font-weight: 700;
         color: $heading-color;
-        margin-bottom: 20px;
-    }
-    ul {
         margin-bottom: 40px;
-        padding-left: 0px;
-        li {
-            cursor: pointer;
-            font-weight: 500;
-            color: $text-color2;
-            transition: all 0.3s ease;
-            position: relative;
-            &::after {
-                position: absolute;
-                bottom: -5px;
-                left: 50%;
-                transform: translate(-50%);
-                width: 0%;
-                height: 2px;
-                content: "";
-                background-color: $heading-color;
-                transition: all 0.3s ease;
-            }
-            &:hover {
-                color: $heading-color;
-                transition: all 0.3s ease;
-                &::after {
-                    transition: all 0.3s ease;
-                    width: 100%;
-                }
-            }
-        }
+        text-align: center;
+        text-transform: capitalize;
     }
-    .work-details {
-        .img-wrapper {
-            margin-bottom: 20px;
-            img {
-                max-width: 100%;
-                width: 100%;
+    .all-images-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .image-container {            
+            width: 100%;
+            .image { 
+                position: relative;
+                padding-bottom: 100%;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    &:nth-of-type(1) {
+                        filter: grayscale(1) brightness(40%);
+                    }
+                    &:nth-of-type(2) {
+                        clip-path: var(--clip-start);
+                        transition: clip-path 0.5s;
+                    }
+                }
+                &:hover {
+                    img {
+                        &:nth-of-type(2) {
+                            clip-path: var(--clip-end);
+                        }
+                    }
+                }
             }
         }
     }
 }
 
 .testimonials {
-    
     padding: 50px 0px;
     background-color: #eee;
     h2 {
@@ -287,34 +354,20 @@ header {
             padding-bottom: 0px;
         }
     }
-}
 
-.owl-nav {
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    .owl-prev,
-    .owl-next {
-        span {
-            font-size: 50px;
+    .owl-nav {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .owl-prev,
+        .owl-next {
+            span {
+                font-size: 50px;
+            }
         }
     }
-}
-.owl-theme .owl-nav [class*="owl-"]:hover {
-    background: transparent;
-    color: #000;
-}
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:hover span {
-    background: $text-color2;
-}
-.owl-theme .owl-dots .owl-dot span {
-    width: 15px;
-    background: transparent;
-    border: 1px solid $text-color;
-    height: 15px;
 }
 
 .our-clients {
@@ -336,7 +389,7 @@ header {
     }
 }
 
-.banner-quotes { 
+.banner-quotes {
     background-color: $heading-color;
     padding: 100px 0px;
 

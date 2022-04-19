@@ -15,28 +15,13 @@
     />
 
     <!-- owl carosal cdn -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
-      integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"/>
 
     <!-- fontawesome cdn -->
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
 
     <!-- roboto font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -61,9 +46,14 @@
   </head>
 
   <body>
+    
+    
+    
+    
+
 
     <div class="navigation-bar">
-        <div class="container">
+        <div class="container"> 
             <div class="row justify-content-between align-items-center">
 
                 <div class="col-lg-2">
@@ -75,7 +65,7 @@
                 <div class="col-lg-6">
                     <div class="navigation-links">
                         <ul class="d-flex justify-content-between">
-                            <li><a href="">Home</a></li>
+                            <li><a class="active-nav" href="">Home</a></li>
                             <li><a href="">About</a></li>
                             <li class="header-services-link"><a href="">services</a>
                                 <ul class="services-dropdown">
@@ -93,6 +83,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="social-media-icons">
+          <ul>
+            <li><a href=""><i class="fa-brands fa-facebook-f"></i>Facebook</a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+            <li><a href=""><i class="fa-brands fa-linkedin-in"></i>Linkedin</a></li>
+            <li><a href=""><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+          </ul>
         </div>
     </div>
 
@@ -132,7 +130,7 @@
       </div>
     </header>
 
-    <section class="about-us">
+    <section class="about-us" id="index-about-section"> 
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
@@ -150,6 +148,7 @@
                 officiis repudiandae accusamus culpa.
               </p>
               <a href="">find out more</a>
+              <img src="assets/images/heart-img.webp" alt="heart-img" class="heart-img">
             </div>
           </div>
         </div>
@@ -220,75 +219,78 @@
       </div>
     </section>
 
-    <section class="our-work">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="text-center">Our Latest Works</h2>
-            <ul class="d-flex justify-content-between">
-              <li>ALL</li>
-              <li>LOGO</li>
-              <li>BROCHURE</li>
-              <li>PACKAGING</li>
-              <li>ADS</li>
-              <li>PACKAGING</li>
-            </ul>
+<section class="our-work">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-10">
+        <h2>our latest work</h2>
+      </div>      
+    </div>
+        <div class="all-images-wrapper">
+          <div class="image-container"> 
+            <div class="row">
+              <div class="col-lg-3 mt-4">
+                <div class="image img1" style="--clip-start: ellipse(0 0 at 0 0); --clip-end: ellipse(150% 150% at 0 0);">
+                <img src="assets/images/1.jpg" />
+                <img src="assets/images/1.jpg" />
+                </div>
+              </div>
+              <div class="col-lg-3 mt-4">
+                <div class="image img2" style="--clip-start: inset(100% 0 0 0); --clip-end: inset(0 0 0 0);">
+                <img src="assets/images/2.jpg" />
+                <img src="assets/images/2.jpg" />
+                </div>
+              </div>
+              <div class="col-lg-3 mt-4">
+                <div class="image img3" style="--clip-start: ellipse(0 0 at 100% 0); --clip-end: ellipse(150% 150% at 100% 0);">
+                  <img src="assets/images/3.jpg" />
+                  <img src="assets/images/3.jpg" />
+                </div>
+              </div>
+              <div class="col-lg-3 mt-4">
+                <div class="image img4" style="--clip-start: polygon(50% 50%,  50% 50%,  50% 50%, 50% 50%); --clip-end: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);">
+                  <img src="assets/images/4.jpg" />
+                  <img src="assets/images/4.jpg" />
+                </div>
+              </div>
+              <div class="col-lg-3 mt-4">
+                <div class="image img5" style="--clip-start: circle(0); --clip-end: circle(125%);">
+                <img src="assets/images/5.jpg" />
+                <img src="assets/images/5.jpg" />
+                </div>
+              </div>
+              <div class="col-lg-3 mt-4">
+                <div class="image img6" style="--clip-start: inset(100% 100% 100% 100%); --clip-end: inset(0 0 0 0);">
+                  <img src="assets/images/6.jpg" />
+                  <img src="assets/images/6.jpg" />
+                </div>
+              </div>
+              <div class="col-lg-3 mt-4">
+                <div class="image img7" style="--clip-start: ellipse(0 0 at 0 100%); --clip-end: ellipse(150% 150% at 0 100%);">
+                  <img src="assets/images/7.jpg" />
+                <img src="assets/images/7.jpg" />
+                </div>
+              </div>
+              <div class="col-lg-3 mt-4">
+                <div class="image img8" style="--clip-start: inset(0 0 100% 0); --clip-end: inset(0 0 0 0);">
+                  <img src="assets/images/1.jpg" />
+                <img src="assets/images/1.jpg" />
+                </div>
+              </div>
+              <!-- <div class="col-lg-3 mt-4">
+                <div class="image img9" style="--clip-start: ellipse(0 0 at 100% 100%); --clip-end: ellipse(150% 150% at 100% 100%);">
+                <img src="assets/images/1.jpg" />
+                <img src="assets/images/1.jpg" />
+                </div>
+              </div> -->
+            </div>
           </div>
         </div>
-        <div class="work-details">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="img-wrapper">
-                <img
-                  src="assets/images/WhatsApp Image 2022-02-06 at 5.29.43 PM.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="img-wrapper">
-                <img
-                  src="assets/images/WhatsApp Image 2022-02-06 at 5.29.43 PM.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="img-wrapper">
-                <img
-                  src="assets/images/WhatsApp Image 2022-02-06 at 5.29.43 PM.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="img-wrapper">
-                <img
-                  src="assets/images/WhatsApp Image 2022-02-06 at 5.29.43 PM.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="img-wrapper">
-                <img
-                  src="assets/images/WhatsApp Image 2022-02-06 at 5.29.43 PM.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="img-wrapper">
-                <img
-                  src="assets/images/WhatsApp Image 2022-02-06 at 5.29.43 PM.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </div>      
+    </div>
+</section>
+
+
 
     <section class="testimonials">
       <div class="container">
@@ -422,12 +424,7 @@
                 <li><a href="">blog</a></li>
                 <li><a href="">contact</a></li>
               </ul>
-              
-
-
-
-
-
+            
             </div>
           </div>
           <div class="col-lg-3">
